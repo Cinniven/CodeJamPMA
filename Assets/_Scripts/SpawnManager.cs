@@ -62,23 +62,14 @@ public class SpawnManager : MonoBehaviour
     }
     public void SpawnObject()
     {
-        //Picks a random number between 0 and 100, both numbers included, this is to create a spawn 'chance' for the HP packs
-        int numSpawn = Random.Range(0, 101);
-        //if the random is 95 or above spawns HP pack
-        if (numSpawn >= 95)
-        {
-            Instantiate(healthPickup, Spawnpos(), Quaternion.identity);
-        }
-        //any other number and it spawns a meteor
-        else
-        {
             Instantiate(enemyPrefab, Spawnpos(), Quaternion.identity);
-        }
-    }   
+    }  
+     
     public float GetSpawnRate()
     {
         return spawnRate;
     }
+
     public void SetSpawnRate(float vSpawnRate)
     {
         spawnRate = vSpawnRate;

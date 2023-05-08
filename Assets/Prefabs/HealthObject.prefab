@@ -67,9 +67,22 @@ PrefabInstance:
       propertyPath: doesDamage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8964790557067003802, guid: 98f29104816d94e75b5857556e2d0db0, type: 3}
+      propertyPath: powerUps.Array.data[0]
+      value: 
+      objectReference: {fileID: 5652656315377292519}
     - target: {fileID: 8964790557067003803, guid: 98f29104816d94e75b5857556e2d0db0, type: 3}
       propertyPath: m_Name
       value: HealthObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8964790557067003803, guid: 98f29104816d94e75b5857556e2d0db0, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f29104816d94e75b5857556e2d0db0, type: 3}
+--- !u!1 &5652656315377292519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8964790557067003803, guid: 98f29104816d94e75b5857556e2d0db0, type: 3}
+  m_PrefabInstance: {fileID: 3610498749948744572}
+  m_PrefabAsset: {fileID: 0}

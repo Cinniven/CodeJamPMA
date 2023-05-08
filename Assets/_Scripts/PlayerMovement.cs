@@ -52,4 +52,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else rb.velocity = Vector2.right * 0;
     }
+
+    public void ResetRotation()
+    {
+        transform.rotation = Quaternion.identity;
+    }
 }

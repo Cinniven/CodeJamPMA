@@ -16,6 +16,11 @@ public class PlayerShooter : MonoBehaviour
 
     private void Start()
     {
+        Reset();
+    }
+    
+    public void Reset()
+    {
         currentAmmo = ammoCapacity;
     }
 

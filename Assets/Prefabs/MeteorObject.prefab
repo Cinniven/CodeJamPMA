@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8964790557067003799}
   - component: {fileID: 8964790557067003802}
   - component: {fileID: 907640300261739803}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MeteorObject
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -121,11 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMinMax: {x: 50, y: 200}
-  speed: 100
-  spinSpeedMinMax: {x: 0, y: 0}
-  spinSpeed: 0
+  isHealth: 0
   hitValue: 1
   doesDamage: 1
+  powerUps:
+  - {fileID: 5652656315377292519, guid: 9b7290492c4d9be4b930d89d30f7bc72, type: 3}
 --- !u!58 &907640300261739803
 CircleCollider2D:
   m_ObjectHideFlags: 0

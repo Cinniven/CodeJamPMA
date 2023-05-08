@@ -11,6 +11,7 @@ public class ObjectMovement : MonoBehaviour
 
     [SerializeField] int hitValue;
     [SerializeField] bool doesDamage;
+    [SerializeField] GameObject[] powerUps;
 
     private void Awake()
     {
@@ -26,7 +27,6 @@ public class ObjectMovement : MonoBehaviour
             transform.localScale = (Vector3.one / 2) * (100 / rndValue);
             rb.AddTorque(rndValue);
         }
-        
     }
 
     private void FixedUpdate()
@@ -42,15 +42,10 @@ public class ObjectMovement : MonoBehaviour
         rb.velocity = Vector2.down * speed * Time.deltaTime;
     }
 
-    /// <summary>
-    /// Destroys the object and spawns an effect
-    /// </summary>
-    private void DestroyObject()
+    public void SpawnPowerUp()
     {
-        //Destory object
+        Instantiate(powerUps[Random.Range(0, powerUps.Length)], this.gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
-
-        //Spawn particals n shit
     }
 
     /// <summary>
@@ -76,11 +71,12 @@ public class ObjectMovement : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerHit(other.gameObject);
-            DestroyObject();
+            Destroy(gameObject);
         }
-        else if(!other.CompareTag("Object"))
+        else if(Random.Range(1, 50) == 1)
         {
-            DestroyObject();
+            SpawnPowerUp();
         }
+        else Destroy(gameObject);
     }
 }
